@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin Online</title>
+</head>
+<style>
+    #prezentare
+    {
+        display: none;
+    }
+</style>
+<body>
+    <button id="buton">Prezentare</button>
+    <div id="prezentare">
+        <h3>Cine acceseaza magazinul?</h3>
+        <p>Magazinul poate fi accesat de 4 categorii de persoane: clienti, angajatii responsabili de preluarea si livrarea comenzilor, administratorul magazinului si contabilul.</p>
+
+        <h4>Cum pot accesa site-ul magazinului?</h4>
+        <div id="acces">
+            <p>Clientii: completeaza un formular de inregistrare urmand sa primeasca un mail pentru confirmare. O data ce au un cont in aplicatie pot accesa toate produsele puse la dispozitie de magazin si pot efectua comenzi cu livrare oriunde in Romania.</p>
+            <p>Angajatii: pot adauga produse,au acces la datele clientilor, primesc comenzile si se ocupa de impachetare si livrare. </p>
+            <p>Administratorul: are acces la tot ce tine de produse,informatii clienti si angajati.</p>
+            <p>Contabilul: are acces la toate comenzile realizate de clientii magazinului pentru a stabili situatia economica a firmei.</p>
+            <img src="schema.jpeg" width="500px" height="500px">
+        </div>
+
+        <h4>Ce vom avea in baza de date?</h4>
+        <div id="date">
+            <p>Date despre clienti, angajati: nume, adresa, numar de telefon, mail.</p>
+            <p>Comenzi: produse*cantitate, pret total, cont client.</p>
+            <p>Detalii despre produse: pret, cantitatea in stoc, descriere.</p>
+        </div>
+    </div>
+    
+</body>
+<script>
+    const targetDiv = document.getElementById("prezentare");
+    const btn = document.getElementById("buton");
+    btn.onclick = function () {
+    if (targetDiv.style.display != "none") {
+        targetDiv.style.display = "none";
+    } else {
+        targetDiv.style.display = "block";
+    }
+};
+</script>
+</html>
