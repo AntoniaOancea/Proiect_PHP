@@ -1,6 +1,6 @@
 
 
-<?php include 'controllers.php'?>
+<?php include ('controllers.php')?>
 <?php
 // redirect user to login page if they're not logged in
 if (empty($_SESSION['id'])) {
