@@ -1,4 +1,4 @@
-<?php include_once("proiect.html"); ?>
+
 
 <?php include 'controllers.php'?>
 <?php
