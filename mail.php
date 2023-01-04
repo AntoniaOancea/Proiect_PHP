@@ -30,12 +30,12 @@ function send_mail($recipient,$subject,$message)
 
   $mail->MsgHTML($content); 
   if(!$mail->Send()) {
-    //echo "Error while sending Email.";
+   // echo '<alert>("Error while sending Email")</alert>';
     //echo "<pre>";
     //var_dump($mail);
     return false;
   } else {
-    //echo "Email sent successfully";
+    //echo '<alert>("Email sent successfully")</alert>';
     return true;
   }
 

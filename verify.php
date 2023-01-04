@@ -67,15 +67,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>Verify</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-	<h1>Verify</h1>
+	<h1 class="jumbotron text-center">Verify</h1>
 
 	<?php include('header.php');?>
   
  	<div>
-			<br>An email was sent to your address. Paste the code from the email here<br>
+			<br>An email was sent to your address. Paste the code from the email here.<br>
 		<div>
 			<?php if(count($errors) > 0):?>
 				<?php foreach ($errors as $error):?>
@@ -87,7 +91,7 @@
 		<form method="post">
 			<input type="text" name="code" placeholder="Enter your Code"><br>
  			<br>
-			<input type="submit" value="Verify">
+			<input type="submit" value="Verify" class="col-sm-1">
 		</form>
 	</div>
 

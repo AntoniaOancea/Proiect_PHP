@@ -1,6 +1,7 @@
 <?php 
 
 session_start();
+$conn = mysqli_connect('localhost','root','antonia','magazin');
 
 function signup($data)
 {
@@ -75,11 +76,11 @@ function login($data)
 				$_SESSION['USER'] = $row;
 				$_SESSION['LOGGED_IN'] = true;
 			}else{
-				$errors[] = "wrong email or password";
+				$errors[] = "Wrong email or password";
 			}
 
 		}else{
-			$errors[] = "wrong email or password";
+			$errors[] = "Wrong email or password";
 		}
 	}
 	return $errors;
@@ -115,7 +116,6 @@ function check_login($redirect = true){
 
 		return true;
 	}
-
 	if($redirect){
 		header("Location: login.php");
 		die;
@@ -143,4 +143,5 @@ function check_verified(){
 	return false;
  	
 }
+
 
